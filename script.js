@@ -47,11 +47,11 @@ const updateFlag = (element) => {
   let img = element.parentElement.querySelector("img");
   img.src = newStr; //Update flag image source with the new URL.
 };
- 
+
 //Handle ["Get exchange rate"] button click event
 btnConvert.addEventListener("click", (evt) => {
   evt.preventDefault();
-  updateExchangeRate(); 
+  updateExchangeRate();
 });
 
 //Main function to fetch and update exchange rate .
@@ -77,13 +77,15 @@ const updateExchangeRate = async () => {
   const URL = `${BASE_URL}/${fromCurrency}.json?`;
   const responce = await fetch(URL);
   const data = await responce.json();
-  const rates = data[fromCurrency][toCurr.value.toLowerCase()];//Extract the required currency rate.
+  const rates = data[fromCurrency][toCurr.value.toLowerCase()]; //Extract the required currency rate.
   // console.log(rates);
   var finalAmount = rates * amtVal;
   // console.log(finalAmount);
   //show converted amount in the UI(user interface)
-  msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount.toFixed(2)} ${toCurr.value}`;
-};//Handle ["swap"] button click event to swap currencies
+  msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount.toFixed(2)} ${
+    toCurr.value
+  }`;
+}; //Handle ["swap"] button click event to swap currencies
 swap.addEventListener("click", () => {
   let temp = fromCurr.value;
   fromCurr.value = toCurr.value;
@@ -92,5 +94,4 @@ swap.addEventListener("click", () => {
   //Update the flags after swapping currencies
   updateFlag(fromCurr);
   updateFlag(toCurr);
- });
-
+});

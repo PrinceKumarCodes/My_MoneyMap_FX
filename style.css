@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -11,11 +10,10 @@ body {
   font-family: "poppins", sans-serif;
   background-color: black;
   display: flex;
-   background-image: url("/Image/image.png");
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
+  background-image: url("/Image/image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 .container {
   position: absolute;
@@ -29,12 +27,9 @@ body {
   justify-content: space-around;
   object-fit: cover;
   padding: 30px;
-
- 
 }
 
 /* --------------Left part------------ */
-
 .container .left-part {
   width: 100%;
   height: 107%;
@@ -50,15 +45,12 @@ body {
   object-fit: cover;
   margin: 10px;
   padding: 10px;
-  
 }
-
 .container .left-part .profile-logo img {
- 
   height: 100%;
   width: 100%;
   transition: 0.5s;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .profile-logo {
   width: 270px;
@@ -73,7 +65,6 @@ body {
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
 }
-
 .profile-logo:hover {
   border: 9px double blue;
   box-shadow: 0px 0px 30px rgb(3, 67, 170);
@@ -94,18 +85,16 @@ body {
     border: 9px double blue;
     box-shadow: 0px 0px 30px rgb(3, 67, 170);
   }
-
   to {
     border: 9px double red;
     box-shadow: 0px 0px 30px rgb(255, 30, 50);
   }
 }
-.profile-text h1{
+.profile-text h1 {
   background: linear-gradient(360deg, #de00ff, #0000ff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .left-part .social-media {
   padding-top: 20px;
   font-size: 30px;
@@ -120,7 +109,6 @@ body {
 }
 
 /* --------------------Right part-------------------- */
-
 .container .right-part {
   margin: 10px;
   padding: 20px;
@@ -130,12 +118,11 @@ body {
   border-radius: 1rem;
   min-height: 45vh;
   width: 45vw;
-  color:black;
+  color: black;
   text-align: left;
-  
 }
-h2{
-   font-size: 26px;
+h2 {
+  font-size: 26px;
   font-weight: 700;
   color: #222;
   margin-bottom: 15px;
@@ -153,7 +140,6 @@ input {
   outline: none;
   border-radius: 0.75rem;
 }
-
 form input {
   border: 1px solid lightgray;
   font-size: 1rem;
@@ -178,7 +164,6 @@ form input {
   border: 1px solid lightgray;
   padding: 3px;
 }
- 
 .dropdown i {
   font-size: 1.5rem;
   margin-top: 1rem;
@@ -186,7 +171,6 @@ form input {
 .dropdown .select-container select {
   font-size: 1rem;
 }
-
 .msg {
   margin: 2rem 0;
 }
@@ -197,30 +181,27 @@ form button {
   font-size: 1.15rem;
   cursor: pointer;
 }
- 
 @media only screen and (max-width: 1000px) {
-
- .container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
-  margin-bottom: 50px;
-  padding: 30px;
-
- } 
- .container .right-part{
-  width: 80vw;
-  height:auto;
-  margin: 10px;
-  padding: 20px;
-  flex-basis: 40%;
-  background-color: #fff;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  min-height: 45vh;
-  width: 80vw;
-  text-align: left;
- }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    padding: 30px;
+  }
+  .container .right-part {
+    width: 80vw;
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    flex-basis: 40%;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    min-height: 45vh;
+    width: 80vw;
+    text-align: left;
+  }
 }

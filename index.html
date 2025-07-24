@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="container">
         <div class="left-part">
             <div class="profile-logo">
                 <img src="/Image/profile_photo1.jpg" alt="">
             </div>
-            <div class="profile-text">           
+            <div class="profile-text">
                 <br>
-                <h5 >Hi I'm </h5>
+                <h5>Hi I'm </h5>
                 <h1>Prince Kumar</h1>
                 <br>
                 <p>
-                Welcome to my calculator website! As a dedicated and aspiring web developer,
-                I am driven by a passion for creating innovative solutions and advancing technology. 
-                I love coding and problem-solving, and I continuously seek opportunities to learn 
-                and grow in this dynamic field.
-               </p>
-            </div>       
+                    Welcome to my calculator website! As a dedicated and aspiring web developer,
+                    I am driven by a passion for creating innovative solutions and advancing technology.
+                    I love coding and problem-solving, and I continuously seek opportunities to learn
+                    and grow in this dynamic field.
+                </p>
+            </div>
             <div class="social-media">
                 <a href="mailto:mailbox.prince.kumar@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
                 <a href="https://github.com/PrinceKumarCodes" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/prince-kumar-202a33256/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/prince-kumar-202a33256/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
 
         <!---------Right part--------------->
         <div class="right-part">
             <div class="right-box">
-            <h2>My MoneyMap FX</h2>
-            <form>
-                <div class="amount">
-                    <p>Enter amount</p>
-                    <input type="text" value="1">
-                </div>
-                <div class="dropdown">
-                    <div class="from">
-                        <p>From</p>
-                        <div class="select-container">
-                            <img src="https://flagsapi.com/US/flat/64.png" alt="flag">
-                            <select name="from" class="currency-select">
-                                <!-- <option value="USD">USD</option>
+                <h2>My MoneyMap FX</h2>
+                <form>
+                    <div class="amount">
+                        <p>Enter amount</p>
+                        <input type="text" value="1">
+                    </div>
+                    <div class="dropdown">
+                        <div class="from">
+                            <p>From</p>
+                            <div class="select-container">
+                                <img src="https://flagsapi.com/US/flat/64.png" alt="flag">
+                                <select name="from" class="currency-select">
+                                    <!-- <option value="USD">USD</option>
                                         <option value="INR">INR</option>
                                         <option value="AUR">AUR</option>
                                         <option value="AUD">AUD</option> -->
-                            </select>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                    <div class="to">
-                        <p>To</p>
-                        <div class="select-container">
-                            <img src="https://flagsapi.com/IN/flat/64.png" alt="flag">
-                            <select name="to" class="currency-select">
-                                <!-- <option value="USD">USD</option>
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <div class="to">
+                            <p>To</p>
+                            <div class="select-container">
+                                <img src="https://flagsapi.com/IN/flat/64.png" alt="flag">
+                                <select name="to" class="currency-select">
+                                    <!-- <option value="USD">USD</option>
                                 <option value="INR">INR</option> 
                                 -->
-                            </select>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="msg">1USD = 80INR</div>
-                <button>Get exchange rate</button>
-            </form>
-           </div>
-         </div>
+                    <div class="msg">1USD = 80INR</div>
+                    <button>Get exchange rate</button>
+                </form>
+            </div>
+        </div>
     </div>
-       
+
     <script src="codes.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
