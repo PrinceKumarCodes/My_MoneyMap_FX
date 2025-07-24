@@ -1,6 +1,10 @@
 //------------My Currency Converter Script------------
 //This script is used to convert one currency to another using exchange rates from an API.
 
+//This script also includes a confetti effect that runs when the page loads.
+BothSide_confetti_effect();
+bottom_confectti_effect();
+
 // Base api url for fetching currency exchange rates
 const BASE_URL = "https://latest.currency-api.pages.dev/v1/currencies/";
 
@@ -95,3 +99,76 @@ swap.addEventListener("click", () => {
   updateFlag(fromCurr);
   updateFlag(toCurr);
 });
+
+//Add confetti_effect
+function BothSide_confetti_effect() {
+  var end = Date.now() + 7 * 1000; // Run for 7 seconds
+  var colors = [
+    "#00BFFF",
+    "#39FF14",
+    "#FF69B4",
+    "#FF4500",
+    "#32CD32",
+    "#DC143C",
+  ];
+
+  (function frame() {
+    confetti({
+      particleCount: 2,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: colors,
+    });
+    confetti({
+      particleCount: 2,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: colors,
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
+}
+
+//Add bottom confetti efect
+function bottom_confectti_effect() {
+  var count = 200;
+  var defaults = {
+    origin: { y: 1 },
+  };
+
+  function fire(particleRatio, opts) {
+    confetti({
+      ...defaults,
+      ...opts,
+      particleCount: Math.floor(count * particleRatio),
+    });
+  }
+
+  fire(0.25, {
+    spread: 26,
+    startVelocity: 55,
+  });
+  fire(0.2, {
+    spread: 60,
+  });
+  fire(0.35, {
+    spread: 100,
+    decay: 0.91,
+    scalar: 0.8,
+  });
+  fire(0.1, {
+    spread: 120,
+    startVelocity: 25,
+    decay: 0.92,
+    scalar: 1.2,
+  });
+  fire(0.1, {
+    spread: 120,
+    startVelocity: 45,
+  });
+}
