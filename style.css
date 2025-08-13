@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   width: 100%;
   height: 100%;
@@ -15,10 +16,181 @@ body {
   background-repeat: no-repeat;
   object-fit: cover;
 }
+
+/* --------------------bubbles----------------- */
+.container::before {
+  content: "";
+  pointer-events: none;
+  opacity: 1;
+  background: radial-gradient(
+      circle at 8% 0%,
+      rgba(0, 120, 200, 0.6) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 100% 4%,
+      rgba(200, 0, 100, 0.6) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 3% 92%,
+      rgba(120, 0, 200, 0.6) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 90% 100%,
+      rgba(0, 200, 160, 0.6) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(255, 255, 255, 0.35) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 10% 50%,
+      rgba(0, 120, 200, 0.6) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(200, 0, 100, 0.6) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 50% 92%,
+      rgba(120, 0, 200, 0.6) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 200, 160, 0.6) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 25% 15%,
+      rgba(255, 255, 255, 0.35) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 75% 0%,
+      rgba(0, 120, 200, 0.6) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 25% 100%,
+      rgba(200, 0, 100, 0.6) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 75% 90%,
+      rgba(120, 0, 200, 0.6) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 5% 25%,
+      rgba(0, 200, 160, 0.6) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 5% 75%,
+      rgba(255, 255, 255, 0.35) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 95% 25%,
+      rgba(0, 120, 200, 0.6) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 95% 75%,
+      rgba(200, 0, 100, 0.6) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 25% 24%,
+      rgba(120, 0, 200, 0.6) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 73% 25%,
+      rgba(0, 200, 160, 0.6) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 25% 75%,
+      rgba(255, 255, 255, 0.35) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 70% 75%,
+      rgba(0, 120, 200, 0.6) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(200, 0, 100, 0.6) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 54% 75%,
+      rgba(120, 0, 200, 0.6) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 25% 50%,
+      rgba(0, 200, 160, 0.6) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(255, 255, 255, 0.35) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 33% 33%,
+      rgba(0, 120, 200, 0.6) 4px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 66% 33%,
+      rgba(200, 0, 100, 0.6) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 32% 67%,
+      rgba(120, 0, 200, 0.6) 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 65% 66%,
+      rgba(0, 200, 160, 0.6) 4px,
+      transparent 5px
+    );
+
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+
 .container {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -27,6 +199,7 @@ body {
   justify-content: space-around;
   object-fit: cover;
   padding: 30px;
+  padding-top: 10px;
 }
 
 /* --------------Left part------------ */
@@ -35,7 +208,6 @@ body {
   height: 107%;
   position: relative;
   flex-basis: 55%;
-  /* background-color: gray; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -45,6 +217,7 @@ body {
   object-fit: cover;
   margin: 10px;
   padding: 10px;
+  padding-bottom: 30px;
 }
 .container .left-part .profile-logo img {
   height: 100%;
@@ -115,11 +288,19 @@ body {
   flex-basis: 40%;
   background-color: #fff;
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
+  border: 4px solid;
+  border-image-source: linear-gradient(270deg, #de00ff, #0000ff);
+  border-image-slice: 1;
   min-height: 45vh;
   width: 45vw;
   color: black;
   text-align: left;
+}
+.container .right-part:hover {
+  border: 4px solid;
+  border-image-source: linear-gradient(270deg, #0000ff, #de00ff);
+  border-image-slice: 1;
 }
 h2 {
   font-size: 26px;
@@ -133,12 +314,14 @@ form {
 
 form,
 select,
-button,
 input {
   width: 100%;
   border: none;
   outline: none;
   border-radius: 0.75rem;
+}
+button {
+  width: 100%;
 }
 form input {
   border: 1px solid lightgray;
@@ -175,33 +358,241 @@ form input {
   margin: 2rem 0;
 }
 form button {
-  height: 3rem;
   background-color: hsl(287, 64%, 59%);
   color: #fff;
   font-size: 1.15rem;
   cursor: pointer;
+  border: none;
 }
+
+/* ---------------------Animate button------------------- */
+
+.animated-button1 {
+  background: linear-gradient(45deg, #00ffd5, #ff00c8);
+  /* background:  linear-gradient(135deg, #6a11cb, #2575fc); */
+
+  padding: 20px 20px;
+  display: flex;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  overflow: hidden;
+  color: #f7d4d4;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.animated-button1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #ad8585;
+  opacity: 0;
+  -webkit-transition: 0.2s opacity ease-in-out;
+  transition: 0.2s opacity ease-in-out;
+}
+
+.animated-button1:hover::before {
+  opacity: 0.2;
+}
+
+.animated-button1 span {
+  position: absolute;
+}
+
+.animated-button1 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(rgba(43, 8, 8, 0)),
+    to(#d92626)
+  );
+  background: linear-gradient(45deg, #00ffd5, #ff00c8);
+  -webkit-animation: 2s animateTop linear infinite;
+  animation: 2s animateTop linear infinite;
+}
+
+@keyframes animateTop {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.animated-button1 span:nth-child(2) {
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 2px;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(43, 8, 8, 0)),
+    to(#d92626)
+  );
+  background: linear-gradient(45deg, #00ffd5, #ff00c8);
+  -webkit-animation: 2s animateRight linear -1s infinite;
+  animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+.animated-button1 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(43, 8, 8, 0)),
+    to(#d92626)
+  );
+  background: linear-gradient(45deg, #00ffd5, #ff00c8);
+  -webkit-animation: 2s animateBottom linear infinite;
+  animation: 2s animateBottom linear infinite;
+}
+
+@keyframes animateBottom {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+.animated-button1 span:nth-child(4) {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 2px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(43, 8, 8, 0)),
+    to(#d92626)
+  );
+  background: linear-gradient(45deg, #00ffd5, #ff00c8);
+  -webkit-animation: 2s animateLeft linear -1s infinite;
+  animation: 2s animateLeft linear -1s infinite;
+}
+
+@keyframes animateLeft {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+/* --------------footer -------------*/
+footer {
+  position: absolute;
+  bottom: 0px;
+  padding: 10px;
+  color: rgb(184, 182, 182);
+  width: 100%;
+  box-shadow: 0px 0px 25px black;
+  font-size: 0.9rem;
+  /* background-color: linear-gradient(45deg, #00ffd5, #ff00c8);
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  ); */
+}
+
+/*------------------- Responsive ---------------------- */
 @media only screen and (max-width: 1000px) {
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 150px;
     padding: 30px;
+    padding-top: 10px;
+  }
+  .container .left-part {
+    width: 100%;
+    height: 107%;
+    position: relative;
+    flex-basis: 55%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    object-fit: cover;
+    margin: 10px;
+    padding: 10px;
   }
   .container .right-part {
     width: 80vw;
     height: auto;
     margin: 10px;
-    padding: 20px;
+    margin-top: 5px;
     flex-basis: 40%;
     background-color: #fff;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 1rem;
     min-height: 45vh;
     width: 80vw;
     text-align: left;
+    margin-bottom: 50px;
+  }
+  footer {
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+    color: rgb(184, 182, 182);
+    width: 100%;
+    box-shadow: 0px 0px 25px black;
+    font-size: 0.9rem;
+    background: linear-gradient(to right, rgb(1, 1, 53), rgb(44, 1, 1));
   }
 }

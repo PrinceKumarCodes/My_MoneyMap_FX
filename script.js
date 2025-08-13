@@ -100,6 +100,9 @@ swap.addEventListener("click", () => {
   updateFlag(toCurr);
 });
 
+//Make updatable year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
 //Add Both side confetti_effect
 function bothSide_confetti_effect() {
   var end = Date.now() + 10 * 1000; // Run for 7 seconds
